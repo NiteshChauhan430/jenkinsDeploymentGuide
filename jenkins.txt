@@ -1,0 +1,61 @@
+Jenkins:-Jenkins is an open source automation tool written in Java programming language that allows continuous integration.
+It also allows us to continuously deliver our software by integrating with a large number of testing and deployment technologies.
+For example: If any organization is developing a project, then Jenkins will continuously test your project builds and show you the errors in early stages of your development.
+
+Advantages of Jenkins-
+It is an open source tool.
+It is free of cost.
+It does not require additional installations or components. Means it is easy to install.
+Easily configurable.
+It supports 1000 or more plugins to ease your work. If a plugin does not exist, you can write the script for it and share with community.
+It is built in java and hence it is portable.
+It is platform independent. It is available for all platforms and different operating systems. Like OS X, Windows or Linux.
+Easy support, since it open source and widely used.
+Jenkins also supports cloud based architecture so that we can deploy Jenkins in cloud based platforms.
+
+Disadvantages of Jenkins-
+Its interface is out dated and not user friendly compared to current user interface trends.
+Not easy to maintain it because it runs on a server and requires some skills as server administrator to monitor its activity.
+CI regularly breaks due to some small setting changes. CI will be paused and therefore requires some developer's team attention.
+
+Jenkins architecture has two components:
+Jenkins Master/Server
+Jenkins Slave/Node/Build Server
+
+Jenkins Automated Deployment:-
+Jenkins provides many plugins which can be used to transfer the build files to the respective application or 
+web server after a successful build, for example, the "Deploy to container" plugin.This plugin takes a war or ear
+file and then it deploys to a running remote application server at the end of a build.
+
+Step 1: Go to the manage Jenkins -> Manage Plugins. Go to the Available tab and filter for "Deploy to container" plugin.
+Step 2: Go to your created build project and click on the Configure option from the left-side of the panel.
+Step 3: On the configuration page, scroll down and click on Add post-build action button. Select Deploy war/ear to a container option.
+Step 4: In the Deploy war/ear to a container section, enter the information of the server on which the files need to be deployed.
+Step 5: Click on the Save button.
+Now select Build Now.
+
+Jenkins-Continuous Deployment:-
+Jenkins is used in providing good support for continuous deployment and delivery.
+Jenkins provides various plugins which are used to give a graphical representation of the continuous deployment process.
+Step 1: Go to the Jenkins Dashboard and select New Item.
+Step 2: Give the Item name and choose Freestyle project option.Click on OK button.
+Step 3: Select the Git option and enter the GitHub repository of your HelloWorld program in the Repository URL section.
+Step 4: Select the Execute Windows batch command option from the add build step button and give the command to run your java program.
+Step 5: Click on Apply then Save button.So our project demo is now created. You can check a build to see if the build is successfully created or not. To check a build, click on the Build Now option.
+Step 6: Now, go to your previously created Helloworld project and click on the Configure option.
+Step 7: In the Project configuration, select the Add post-build action and choose Build other projects option.
+Step 8: In the Projects to build option, enter the "demo" as the project name to build. You can leave the other option as the default. Click on Apply then the Save button.
+Step 9: Now, build the HelloWorld project. To do that, click on the Build Now option.
+Step 10: Click on the latest build and select the Console Output option.
+Step 11: Let's now install the Delivery pipeline plugin. Select Manage Jenkins option.
+Step 12: Select the Manage Plugins option.
+Step 13: In the Available tab, search for "Delivery Pipeline" plugin in the filter option. Select Delivery Pipeline plugin and click on Install without Restart
+Step 14: To see the Delivery Pipeline in action, click on + symbol in the tab next to the All tab on the Jenkins Dashboard screen.
+Step 15: Give the View name and select Delivery Pipeline View. Click on OK button.
+Step 16: In the next page, leave the default options. Scroll down and change the following settings:
+	Make sure "Show static analysis results" option is checked.
+	Make sure the option "Show total build time" is checked.
+	In the Pipelines section for the Initial job enter the Helloworld project as the first job which should build.
+	Give any name for the Pipeline
+	Click the Apply and OK button.
+
